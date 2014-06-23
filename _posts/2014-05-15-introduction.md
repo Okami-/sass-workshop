@@ -5,7 +5,7 @@ categories: [general, demo]
 tags: [demo, dbyll, dbtek]
 fullview: true
 ---
-<img src="{{ site.baseurl }}/assets/media/shia-magic.gif"/>
+<img class="shia-magic" src="{{ site.baseurl }}/assets/media/shia-magic.gif"/>
 
 <p>SASS stands for syntactically awesome style sheets. It is a preprocessor that compiles into css. This allows a person to use features such as variables, nesting, mixins, inheritence and other advanced coolness that isn't in css. Pretty much sass makes writing css fun.</p>
 

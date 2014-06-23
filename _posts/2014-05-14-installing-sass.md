@@ -5,7 +5,7 @@ categories: [general, setup, demo]
 tags: [demo, dbyll, dbtek, setup]
 fullview: true
 ---
-<img src="{{ site.baseurl }}/assets/media/gob-car-dance.gif"/>
+<img class="gob-dance" src="{{ site.baseurl }}/assets/media/gob-car-dance.gif"/>
 <p>For Linux and OS X folks, depending on your setup, you may or may not need to install gems under the sudo user. For example, if you are using RVM, you won't need to install your gems under the sudo user.</p>
 
 <p>For Sass/Compas to run on your computer ruby is needed.</p>
