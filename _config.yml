@@ -17,7 +17,7 @@ author:
 rss_path: feed.xml
 categories_path: categories.html
 tags_path: tags.html
-baseurl:
+baseurl: http://ucsf-drupal.github.io/sass-workshop
 BASE_PATH: http://ucsf-drupal.github.io/sass-workshop
 
 # All links will be namespaced by BASE_PATH if defined.
