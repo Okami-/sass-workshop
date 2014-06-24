@@ -4,7 +4,7 @@ paginate: 1 # pagination based on number of posts
 paginate_path: "page:num"
 exclude: ["README.md"] # files to exclude
 highlighter: true
-
+markdown: kramdown
 title: Sass Workshop
 description: Let's get sassy
 author:

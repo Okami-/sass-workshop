@@ -1,8 +1,8 @@
 ---
 layout: post
 title: SASS/COMPASS Introduction
-categories: [general, demo]
-tags: [demo, dbyll, dbtek]
+categories: [general, setup, demo]
+tags:
 fullview: true
 ---
 <img class="shia-magic" src="{{ site.baseurl }}/assets/media/shia-magic.gif"/>

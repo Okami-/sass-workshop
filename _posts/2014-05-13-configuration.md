@@ -2,7 +2,7 @@
 layout: post
 title: Play Time
 categories: [general, setup, demo]
-tags: [demo, dbyll, dbtek, setup]
+tags:
 fullview: true
 ---
 

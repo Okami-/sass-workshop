@@ -2,7 +2,7 @@
 layout: post
 title: Installation
 categories: [general, setup, demo]
-tags: [demo, dbyll, dbtek, setup]
+tags:
 fullview: true
 ---
 <img class="gob-dance" src="{{ site.baseurl }}/assets/media/gob-car-dance.gif"/>
