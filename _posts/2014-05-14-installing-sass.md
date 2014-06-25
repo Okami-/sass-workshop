@@ -6,9 +6,17 @@ tags:
 fullview: true
 ---
 <img class="gob-dance" src="{{ site.baseurl }}/assets/media/gob-car-dance.gif"/>
+
+I recommend using google chrome, firefox, or any IE 11 or above.
+
+Git is going to be needed to follow along the workshop.
+
+If you don't have git please go to <a target="_blank" href="http://git-scm.com/book/en/Getting-Started-Installing-Git">http://git-scm.com/book/en/Getting-Started-Installing-Git</a> and follow the directions for your operating system.
+
+
 <p>For Linux and OS X folks, depending on your setup, you may or may not need to install gems under the sudo user. For example, if you are using RVM, you won't need to install your gems under the sudo user.</p>
 
-<p>For Sass/Compas to run on your computer ruby is needed.</p>
+<p>For Sass/Compas to run on your computer ruby is needed, and for this version git also.</p>
 
 ###OSX
 <ol>

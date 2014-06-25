@@ -4,6 +4,7 @@ title: File Structures
 categories: [general, setup, demo]
 tags:
 description: File Structures
+fullview: true
 ---
 
 <h3>SMACCS</h3>
