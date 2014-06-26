@@ -8,9 +8,9 @@ The best way to learn sass/compass is to create your own project and go from the
 
 ###Creating a Sass Project
 
-Find a good place on your computer and create a folder called sass-test
+Find a good place on your computer and create a folder called sass-test.
 
-CD into that folder with your command line and type
+CD into that folder with terminal/command line and type:
 
 <pre><code>$ compass create</code></pre>
 
@@ -20,6 +20,6 @@ Go back to the command line and cd back to your working directory a level above 
 
 <pre><code>$ compass watch</code></pre>
 
-Go ahead and put that command in and compass should start watching your sass file now. This allows for on the fly compiling to normal css. Now that we have compass watching our file(s) we can begin to make changes.
+Go ahead and put that command in and compass should start watching your sass file(s) now. This allows for on the fly compiling to normal css. Now that we have compass watching our file(s) we can begin to make changes.
 
 You can also try out commands with

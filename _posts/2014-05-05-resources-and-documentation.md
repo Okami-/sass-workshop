@@ -15,3 +15,5 @@ fullview: true
 <a href="http://smacss.com/">http://smacss.com/</a>
 
 <a href="http://bem.info">http://bem.info</a>
+
+<a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/</a>
