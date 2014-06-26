@@ -3,7 +3,7 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
-@import "compass/reset";
+//@import "compass/reset";
 
 //@import "compass/utilities/sprites"; // Has to be added, identifies that this
                                      // project will be using the sprites utility
@@ -21,7 +21,7 @@
 @import "global/forms";
 @import "global/typography";
 
-@import "vender/lightbox.scss";
+@import "vendor/lightbox";
 
 @import "layout/l-header";
 @import "layout/l-masthead";
