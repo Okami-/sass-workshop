@@ -1,8 +1,6 @@
 ---
 layout: post
 title: Play Time
-categories: [general, setup, demo]
-tags:
 fullview: true
 ---
 
@@ -24,3 +22,4 @@ Go back to the command line and cd back to your working directory a level above 
 
 Go ahead and put that command in and compass should start watching your sass file now. This allows for on the fly compiling to normal css. Now that we have compass watching our file(s) we can begin to make changes.
 
+You can also try out commands with

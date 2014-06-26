@@ -1,8 +1,6 @@
 ---
 layout: post
 title: Installation
-categories: [general, setup, demo]
-tags:
 fullview: true
 ---
 <img class="gob-dance" src="{{ site.baseurl }}/assets/media/gob-car-dance.gif"/>
@@ -46,3 +44,5 @@ make sure to check add ruby executibles on install.</p>
   </li>
   <li>Enter <pre><code>$ sudo gem install compass</code></pre></li>
 </ol>
+
+Find a place to

@@ -1,8 +1,6 @@
 ---
 layout: post
 title: SASS/COMPASS Introduction
-categories: [general, setup, demo]
-tags:
 fullview: true
 ---
 <img class="shia-magic" src="{{ site.baseurl }}/assets/media/shia-magic.gif"/>

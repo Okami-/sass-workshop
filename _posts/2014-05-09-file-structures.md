@@ -1,9 +1,6 @@
 ---
 layout: post
 title: File Structures
-categories: [general, setup, demo]
-tags:
-description: File Structures
 fullview: true
 ---
 
