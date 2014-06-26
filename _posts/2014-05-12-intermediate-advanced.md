@@ -8,7 +8,7 @@ fullview: true
 
 I would say mixins are one of the most powerful aspects of Sass.
 
-<h4>Clearfix Mixin</h5>
+<h5>Clearfix Mixin</h5>
 
 <pre class="prettyprint lang-scss"><code>
   @mixin clearfix() {

@@ -33,7 +33,6 @@ fullview: true
 
 <pre class="prettyprint lang-scss"><code>
   nav {
-
     ul {
       margin: 0;
       padding: 0;

@@ -14,7 +14,7 @@ If you don't have git please go to <a target="_blank" href="http://git-scm.com/b
 
 <p>For Linux and OS X folks, depending on your setup, you may or may not need to install gems under the sudo user. For example, if you are using RVM, you won't need to install your gems under the sudo user.</p>
 
-<p>For Sass/Compas to run on your computer ruby is also needed.</p>
+<p>For Sass/Compas to run on your computer ruby is also needed. Installing compass will also install Sass.</p>
 
 ###OSX
 <ol>
@@ -31,8 +31,6 @@ make sure to check add ruby executibles on install.</p>
   <li>Open up command prompt.</li>
   <li><pre><code>$ gem install compass</code></pre></li>
 </ol>
-
-
 
 <h3>Linux</h3>
 

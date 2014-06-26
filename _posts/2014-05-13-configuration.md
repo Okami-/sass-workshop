@@ -1,12 +1,10 @@
 ---
 layout: post
-title: Play Time
+title: Creating a Sass Project
 fullview: true
 ---
 
 The best way to learn sass/compass is to create your own project and go from there.
-
-###Creating a Sass Project
 
 Find a good place on your computer and create a folder called sass-test.
 
