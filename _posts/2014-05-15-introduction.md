@@ -5,10 +5,6 @@ fullview: true
 ---
 <img class="shia-magic" src="{{ site.baseurl }}/assets/media/shia-magic.gif"/>
 
-<p>SASS stands for syntactically awesome style sheets. It is a preprocessor that compiles into css. This allows a person to use features such as variables, nesting, mixins, inheritence and other advanced coolness that isn't in css. Pretty much sass makes writing css fun.</p>
-
-<p>Compass is a sass library that extends the functionality of sass.</p>
-
 <h2>Variables</h2>
 
 <p>Variables in sass are a way to store information. Generally in a sass project variables will be assigned typefaces, colors, or dimensional defaults that have been set for your project. Sass variables allow a user to make a change from a singular point instead of finding every single selector. Ex. "Hey Bob I don't like this main font color can you change it to this light blue."</p>

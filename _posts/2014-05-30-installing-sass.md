@@ -5,6 +5,10 @@ fullview: true
 ---
 <img class="gob-dance" src="{{ site.baseurl }}/assets/media/gob-car-dance.gif"/>
 
+<p>SASS stands for syntactically awesome style sheets. It is a preprocessor that compiles into css. This allows a person to use features such as variables, nesting, mixins, inheritence and other advanced coolness that isn't in css. Pretty much sass makes writing css fun.</p>
+
+<p>Compass is a sass library that extends the functionality of sass.</p>
+
 I recommend using google chrome, firefox, or any IE 11 or above.
 
 Git is going to be needed to follow along the workshop.
