@@ -97,13 +97,13 @@ BEM and SMACCS sets design components as pieces, at the same time giving sass a 
 
 I've included a boilerplate at UCSF Drupal's Github. Find a place in your file system to store this repository. Install the files by:
 
-<pre><code>$ git clone git@github.com:ucsf-drupal/sass-workshop.git
+<pre><code>git clone git@github.com:ucsf-drupal/sass-workshop.git
 </code></pre>
 
 If that doesn't work for you try:
 
-<pre><code>$ git clone https://github.com/ucsf-drupal/sass-workshop.git</code></pre>
+<pre><code>git clone https://github.com/ucsf-drupal/sass-workshop.git</code></pre>
 
 Next switch to the "structure" branch
 
-<pre><code>$ git checkout structure</code></pre>
+<pre><code>git checkout structure</code></pre>
