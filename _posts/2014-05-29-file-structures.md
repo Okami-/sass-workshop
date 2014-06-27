@@ -15,7 +15,7 @@ BEM and SMACCS sets design components as pieces, at the same time giving sass a 
   |   |-- _breakpoints.scss
   |   |-- _colors.scss
   |   |-- _grids.scss
-  |   |-- _minins.scss
+  |   |-- _mixins.scss
   |-- global # site wide partials MAIN content area
   |   |-- _extendables.scss
   |   |-- _forms.scss

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: SASS/COMPASS Introduction
+title: SASS/COMPASS Beginning
 fullview: true
 ---
 <img class="shia-magic" src="{{ site.baseurl }}/assets/media/shia-magic.gif"/>
