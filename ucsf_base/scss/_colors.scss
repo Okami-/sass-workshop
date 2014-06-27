@@ -1,0 +1,299 @@
+/* This file should be the one we copy/paste to override values in the different subthemes */
+
+
+/******************************************************************************
+* Base colors: what everything sits on top of with out alteration;
+* if items aren't styled otherwise, these are the colors that 
+* are inherited to elements. 
+*/
+
+/* 
+	Colors that are supposed to be able to change from site to site 
+	
+	Total of about 8-10 colors that are changed between themes
+
+	There are some misc elements that style differently depending...
+
+	Body
+	 - body-background
+	 - body-text
+	 - body-link
+	 - body-link-hover
+	 - body-link-active ( inherits hover if not defined )
+
+	Header 
+	 - header-title-text
+	 - header-background ( main color of the splash )
+	 - header-shadow-start
+	 - header-shadow-stop
+
+	Main Menu
+	 - main menu text
+	 - main menu backgroud
+	 - main menu hover
+	 - main menu active ( can be same as hover till defined )
+	 - main menu separator ( border color essentially )
+	
+	Page Elements
+	 - page-main-title ( main title of the node )
+	 - page-headers ( header elements such as h1, h2 ,h3 )
+*/
+
+// Global use
+$signature-color: red;
+$call-to-action-color: #9F4600;
+// Main Body related
+$body-background: #456483;
+$body-text: #4D4E4E;
+$body-text-alt: #FFF;
+$body-link: #9F4600;
+$body-link-hover: #9F4600;
+$body-link-active: $body-link-hover;
+
+// Top Header region bar
+$top-header-region: #666;
+$top-header-region-text: #FFF;
+
+// Header & Primary Navigation
+$header-background-color: #E6EBEF;
+$header-title-text: #48413e;
+
+// Sidebar base header colors
+$header-sidebar: #48413e;
+
+// Main Menu
+$main-menu-text: #FFF;
+$main-menu-background: rgb(5,39,80);
+$main-menu-hover: #A24701;
+$main-menu-active: $main-menu-hover;
+$main-menu-separator: #FFF;
+
+// Page Elements
+$page-main-title: #456483;
+$page-headers: #456483;
+
+$sidebar-first-background: #C0CCD6;
+$sidebar-second-background: #C0CCD6;
+
+// Meta Colors: 
+$meta-background: #F1F4FA;
+
+// Call out box 
+$callout-box: #A24712;
+$callout-box-alt-1: #403F3E;
+$callout-box-alt-2: #002C4F;
+
+// article meta 
+$article-meta: #F1F4FA;
+
+body {
+	background-color: $body-background;
+	color: $body-text;
+
+	a, a:link { color: $body-link;}
+	a:hover { color: $body-link-hover;}
+	a:active { color: $body-link-active;}
+}
+
+.top-region-container  {
+	background: $top-header-region;
+	
+	&, ul li a {
+		color: $top-header-region-text;
+	}
+}
+
+.header-container {
+	background: $header-background-color;
+	@include box-shadow(#101930 -10em 10px 100px, #101930 10em 10px 100px);
+
+
+	.siteinfo h1 {
+		&, a {
+			color: $header-title-text;
+		}
+	}
+
+	nav {
+		background: $main-menu-background;
+		ul li {
+			border-right: 1px solid $main-menu-separator;
+			&:hover { background: $main-menu-hover; }
+			&.active-trail, &.active, &:active {  background: $main-menu-hover; }
+			
+		}
+		ul li a {
+			&, &:link { color: $main-menu-text; }
+
+			&.active, &.active-trail {
+				font-weight: normal;
+			}
+		}
+
+		// The little arrow color
+		ul li.active::after {
+			border-left:5px solid transparent;
+			border-right:5px solid transparent;
+			border-top: 5px solid $main-menu-active;
+		}
+	}
+}
+
+.view-id-events {
+	.event-meta {
+		background: $meta-background;
+	}
+}
+.footer-container {
+	color: $body-text-alt;
+}
+
+
+#main-content {
+	background: #FFF;
+
+}
+
+
+
+// Headers
+h1 {
+	color: $page-main-title;
+}
+
+h2, h3, h4, h5, h6 { color: $page-headers; }
+// Sidebar headers & titles
+.page .sidebar-first,
+.page .sidebar-second {
+	
+	border-top: 10px solid $header-background-color;
+	.title, .title a { color: $header-sidebar; } 
+
+}
+	
+.page { 
+	background-color: $sidebar-first-background;
+}
+
+// Call out box
+.page .sidebar-first .callout-box,
+.page .sidebar-second .callout-box, 
+.view-id-callout,
+.callout-box {
+	&, h1, h2, h3, h4, h5, a, p, .title {
+		color: #FFF;
+	}
+}
+.view-id-callout,
+.callout-box {
+	background: $callout-box;
+}
+.callout-box-alt-1 {
+	background: $callout-box-alt-1;
+}
+.callout-box-alt-2 {
+	background: $callout-box-alt-2;
+}
+
+/* 
+	article meta 
+	found in a node contains date and other misc info, 
+*/
+.article-meta {
+	background: $article-meta;
+	color: $body-link;
+}
+
+// News Block,
+.view-display-id-news_block {
+	.views-field-title {
+		font-weight: 300;
+		
+		a { color: $body-link; }
+	}
+}
+
+// General News item stuff
+.view-id-news {
+	&.view-display-id-page {
+		.views-field-title {
+			a { color: $body-link;}
+		}
+	}
+}
+
+/* User login */
+.marker,
+.form-required {
+  color: $body-text;
+}
+
+/* FOOTER */
+// @include icon-sprite('phone');
+.footer-container footer {
+
+	h2 { color: #FFF; }
+
+	nav[role='navigation'] {
+		border-top: 1px solid $meta-background;
+		ul.menu li {
+			border-right: 1px solid #FFF;
+			a {	color: #FFF; }
+		}
+	}
+
+}
+
+@media screen and (max-width: 629px) {
+    
+    // Navigation & Search Form in Mobile view
+    .header-container .header-region {
+        background: $main-menu-background;
+        .form-actions input { color: $body-link;}
+    }
+
+    /*.sidebar-first { border-top: 30px solid $body-background!important;} 
+    .sidebar-second { border-top: 30px solid $body-background!important;} */
+}
+
+// 630 - Infinity
+@media screen and (min-width: 630px) {
+    .one-sidebar .sidebar-first,
+    .two-sidebars .sidebar-first {
+			@include box-shadow(
+				inset -1px 0 0 rgba(128,128,128, .6),
+				inset -2px 0 0 rgba(128,128,128, .5),
+				inset -3px 0 0 rgba(128,128,128, .4),
+				inset -4px 0 0 rgba(128,128,128, .3),
+				inset -5px 0 0 rgba(128,128,128, .2),
+				inset -6px 0 0 rgba(128,128,128, .1)
+			);
+    }
+}
+
+// 820 - Infinity
+@media screen and (min-width: 820px) {
+    .sidebar-second {
+    	@include box-shadow(
+    		inset 1px 0 0 rgba(128,128,128, .6),
+    		inset 2px 0 0 rgba(128,128,128, .5),
+    		inset 3px 0 0 rgba(128,128,128, .4),
+    		inset 4px 0 0 rgba(128,128,128, .3),
+    		inset 5px 0 0 rgba(128,128,128, .2),
+    		inset 6px 0 0 rgba(128,128,128, .1)
+    		);
+    }
+}
+
+@media screen and (min-width: 630px) and (max-width: 819px) { 
+	.sidebar-second { 
+		/*border-top: 30px solid $body-background!important;*/
+	}
+
+	.page { 
+        .sidebar-second,
+        .sidebar-first {
+            background: $sidebar-first-background;    
+        }
+    }
+}

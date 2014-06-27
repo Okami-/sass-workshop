@@ -1,0 +1,450 @@
+/**
+ * Gridpak Beta SCSS 
+ *
+ * Generator - http://gridpak.com/
+ * Created by @erskinedesign
+ */
+
+
+/* 
+    Direction is mobile first layout elements are stacked accordingly to inherit
+    based on that concept.
+*/
+
+// Desktop & large display
+$display_large_max: 1230px;
+$display_large_min: 820px;
+
+// Devices and medium size displays
+$display_medium_max: 819px;
+$display_medium_min: 630px;
+
+// Handheld and small display screen
+$display_small_max: 629px;
+$display_small_min: 380px;
+
+@mixin col {
+    border:0px solid rgba(0,0,0,0);
+    float:left;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    -moz-background-clip:padding-box !important;
+    -webkit-background-clip:padding-box !important;
+    background-clip:padding-box !important;
+}
+
+.col {
+   @include col;
+   // margin-bottom: 12px;
+   background: rgba(128,0,0, .5);
+   height: 100%;
+}
+
+@mixin span($num, $gutter_pc, $gutter_px, $padding, $max_columns) {
+    $one_col: (100% - ($gutter_pc * ($max_columns - 1))) / $max_columns;
+    width:($one_col * $num) + ($gutter_pc * ($num - 1));
+    border-left-width:$gutter_px;
+    padding:$padding;
+    margin-left:$gutter_pc;
+}
+
+@mixin span_first {
+    margin-left:0;
+}
+
+ 
+body,
+html,
+div {
+     margin: 0;
+     padding:0;
+ }
+ 
+/*
+Page is our center aligned 95% width container. We have set it's 'position' as relative
+so that the Gridpak overlay will appear in the correct position. We have also updated
+the gridpak.js file to use '.page' as it's container.
+*/
+
+.top-header-region,
+.header-container header,
+.page-container,
+.footer-container {
+     margin: 0 auto;
+     max-width: $display-large-max;
+     
+     position:relative;
+     &:after { @extend .clearfix-after; }
+}
+
+.page {
+    height: 100%;
+}
+
+.siteinfo {
+    padding-right: 20%;
+}
+
+/*  TEMPOARY WHILE DEV */
+
+    // Hide Search 
+    #search-block-form { display: none; }
+
+/*  END TEMPORARY WHILE DEV */
+
+
+/* 1. 6 Column Grid 0px - 629px 
+----------------------------------------------------------------------------- 
+
+Span 1:    15.0%
+Span 2:    32.0%
+Span 3:    49.0%
+Span 4:    66.0%
+Span 5:    83.0%
+Span 6:    100%
+
+----------------------------------------------------------------------------- */    
+
+@media screen and (max-width: $display_small_max) {
+
+    /* --- Gridpak variables ---*/ 
+    $max_columns: 6;
+    $padding: 0 1.5%;
+    $gutter_px: 0;
+    $gutter_pc: 2%;
+    
+    .col {
+        margin-left:0;
+        padding:0 1.5%;
+    }
+    
+    .row .col:first-child {
+        @include span_first;
+    }
+    
+    .top-header-region,
+    .header-container header,
+    .page-container,
+    .footer-container {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    /* 
+    Creates the overlap for the main content over the header bar */
+    .header-container {
+        margin-bottom: -133px;
+        .siteinfo {
+            margin-bottom: 133px;
+        }
+    }
+
+
+    // Hide elements within the top region when resized to this breakpoint
+    .top-header-region {
+        nav ul li {
+            display: none;    
+            &:first-child {
+                display: inline-block;
+            }
+        }
+    }
+
+    // Navigation 
+    .header-region nav { 
+        display: none;
+    }
+    
+    .span_1 { @include span(1, $gutter_pc, $gutter_px, $padding, $max_columns); }
+    .span_2 { @include span(2, $gutter_pc, $gutter_px, $padding, $max_columns); }
+    .span_3 { @include span(3, $gutter_pc, $gutter_px, $padding, $max_columns); }
+    .span_4 { @include span(4, $gutter_pc, $gutter_px, $padding, $max_columns); }
+    .span_5 { @include span(5, $gutter_pc, $gutter_px, $padding, $max_columns); }
+    .span_6 {
+        @include span_first;
+        width:100%;
+    }
+}
+
+/* 2. 8 Column Grid 630px - 819px 
+----------------------------------------------------------------------------- 
+
+Span 1:    10.75%
+Span 2:    23.5%
+Span 3:    36.25%
+Span 4:    49.0%
+Span 5:    61.75%
+Span 6:    74.5%
+Span 7:    87.25%
+Span 8:    100%
+
+----------------------------------------------------------------------------- */    
+
+// 
+@media screen and (min-width: $display_medium_min) {
+    /* 
+    Creates the overlap for the main content over the header bar */
+    .header-container {
+        margin-bottom: -60px;
+    }
+    .header-region {
+        margin-bottom: 90px;
+    }
+}
+
+@media screen and (min-width: $display_small_max) and (max-width: $display_medium_max) {
+
+    .col {
+        // margin-left:2%;
+        padding:0 1.5%;
+    }
+    
+    /* --- Gridpak variables ---*/ 
+    $max_columns: 8;
+    $padding: 0 1.5%;
+    $gutter_px: 0;
+    $gutter_pc: 2%;
+    
+    .row .col:first-child {
+        @include span_first;
+    }
+    
+    .top-header-region,
+    .header-container header,
+    .page-container,
+    .footer-container  {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+   .two-sidebars {
+        // Should aways equal 100%
+        $sidebar_first: 25%;
+        $main_content: 75%; // Should be 100% - ( sidebar_first + sidebar_second )
+
+        // Three Column 
+        #main-content { 
+            width: $main_content; 
+            margin-left: $sidebar_first;
+        }
+
+        .sidebar-first {
+            width: $sidebar_first;
+            margin-left: -($sidebar_first + $main_content);
+        }
+    }
+
+    // One sidebar only 
+    .one-sidebar.sidebar-first { 
+        // Should aways equal 100%
+        $sidebar_first: 25%;
+        $main_content: 75%; // Should be 100% - ( sidebar_first + sidebar_second )
+        
+        // Three Column 
+        #main-content { 
+            width: $main_content; 
+            margin-left: $sidebar_first;
+        }
+
+        .sidebar-first {
+            width: $sidebar_first;
+            margin-left: -($sidebar_first + $main_content);
+        }
+    }
+
+    .span_1 { @include span(1, $gutter_pc, $gutter_px, $padding, $max_columns);}
+    .span_2 { @include span(2, $gutter_pc, $gutter_px, $padding, $max_columns);}
+    .span_3 { @include span(3, $gutter_pc, $gutter_px, $padding, $max_columns);}
+    .span_4 { @include span(4, $gutter_pc, $gutter_px, $padding, $max_columns);}
+    .span_5 { @include span(5, $gutter_pc, $gutter_px, $padding, $max_columns);}
+    .span_6 { @include span(6, $gutter_pc, $gutter_px, $padding, $max_columns);}
+    .span_7 { @include span(7, $gutter_pc, $gutter_px, $padding, $max_columns);}
+    .span_8 {
+        @include span_first;
+        width:100%;
+    }
+}
+
+/* 3. 12 Column Grid 820px - 1230px 
+----------------------------------------------------------------------------- 
+
+Span 1:    6.5%
+Span 2:    15.0%
+Span 3:    23.5%
+Span 4:    32.0%
+Span 5:    40.5%
+Span 6:    49.0%
+Span 7:    57.5%
+Span 8:    66.0%
+Span 9:    74.5%
+Span 10:    83.0%
+Span 11:    91.5%
+Span 12:    100%
+
+----------------------------------------------------------------------------- */    
+
+@media screen and (min-width: $display_medium_max) and (max-width: $display_large_max) {
+    
+    .col {
+        // margin-left:2%;
+        padding:0 1.5%;
+    }
+    
+    /* --- Gridpak variables ---*/ 
+    $max_columns: 12;
+    $padding: 0 1.5%;
+    $gutter_px: 0;
+    $gutter_pc: 2%;
+    
+
+    .top-header-region,
+    .header-container header,
+    .page-container,
+    .footer-container  {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+
+    .row .col:first-child {
+        @include span_first;
+    }
+
+    .span_1 { @include span(1, $gutter_pc, $gutter_px, $padding, $max_columns);}
+    .span_2 { @include span(2, $gutter_pc, $gutter_px, $padding, $max_columns);}
+    .span_3 { @include span(3, $gutter_pc, $gutter_px, $padding, $max_columns);}
+    .span_4 { @include span(4, $gutter_pc, $gutter_px, $padding, $max_columns);}
+    .span_5 { @include span(5, $gutter_pc, $gutter_px, $padding, $max_columns);}
+    .span_6 { @include span(6, $gutter_pc, $gutter_px, $padding, $max_columns);}
+    .span_7 { @include span(7, $gutter_pc, $gutter_px, $padding, $max_columns);}
+    .span_8 { @include span(8, $gutter_pc, $gutter_px, $padding, $max_columns);}
+    .span_9 { @include span(9, $gutter_pc, $gutter_px, $padding, $max_columns);}
+    .span_10 { @include span(10, $gutter_pc, $gutter_px, $padding, $max_columns);}
+    .span_11 { @include span(11, $gutter_pc, $gutter_px, $padding, $max_columns);}
+    .span_12 {
+        @include span_first;
+        width:100%;
+    }
+}
+
+
+/* 3. 12 Column Grid 820px - Infinity */    
+
+@media screen and (min-width: $display_large_min ) { 
+
+
+    .header-container { 
+        // min-height: 210px;
+    }
+
+    // When both side bars are avialble
+    .two-sidebars {
+        // Should aways equal 100%
+        $sidebar_first: 25%;
+        $sidebar_second: 25%;
+        $main_content: 50%; // Should be 100% - ( sidebar_first + sidebar_second )
+
+        // Three Column 
+        #main-content { 
+            width: $main_content; 
+            margin-left: $sidebar_first;
+        }
+        .sidebar-first {
+            width: $sidebar_first;
+            margin-left: -($sidebar_first + $main_content);
+        }
+        .sidebar-second {
+            width: $sidebar_second;
+        }
+    }
+
+    // One sidebar only and its sidebar first
+    .one-sidebar.sidebar-first { 
+        // Should aways equal 100%
+        $sidebar_first: 25%;
+        $main_content: 75%; // Should be 100% - ( sidebar_first + sidebar_second )
+        
+        // Three Column 
+        #main-content { 
+            width: $main_content; 
+            margin-left: $sidebar_first;
+        }
+
+        .sidebar-first {
+            width: $sidebar_first;
+            margin-left: -($sidebar_first + $main_content);
+        }
+    }
+
+    // One sidebar only and its sidebar second
+    .one-sidebar.sidebar-second {
+        // Should aways equal 100%
+        $sidebar_second: 25%;
+        $main_content: 75%; // Should be 100% - ( sidebar_first + sidebar_second )
+
+        // Three Column 
+        #main-content { 
+            width: $main_content; 
+        }
+
+        .sidebar-second {
+            width: $sidebar_second;
+        }
+    }
+}
+
+
+/* 4. 12 Column Grid 1239px - Infinity 
+----------------------------------------------------------------------------- 
+
+Span 1:    6.5%
+Span 2:    15.0%
+Span 3:    23.5%
+Span 4:    32.0%
+Span 5:    40.5%
+Span 6:    49.0%
+Span 7:    57.5%
+Span 8:    66.0%
+Span 9:    74.5%
+Span 10:    83.0%
+Span 11:    91.5%
+Span 12:    100%
+
+----------------------------------------------------------------------------- */    
+
+@media screen and (min-width: $display_large_max - 1) {
+
+
+    .col {
+        // margin-left:2%;
+        padding:0 1.5%;
+    }
+    
+    /* --- Gridpak variables ---*/ 
+    $max_columns: 12;
+    $padding: 0 1.5%;
+    $gutter_px: 0;
+    $gutter_pc: 2%;
+    
+    .row .col:first-child {
+        @include span_first;
+    }
+    
+    .span_1 { @include span(1, $gutter_pc, $gutter_px, $padding, $max_columns);}
+    .span_2 { @include span(2, $gutter_pc, $gutter_px, $padding, $max_columns);}
+    .span_3 { @include span(3, $gutter_pc, $gutter_px, $padding, $max_columns);}
+    .span_4 { @include span(4, $gutter_pc, $gutter_px, $padding, $max_columns);}
+    .span_5 { @include span(5, $gutter_pc, $gutter_px, $padding, $max_columns);}
+    .span_6 { @include span(6, $gutter_pc, $gutter_px, $padding, $max_columns);}
+    .span_7 { @include span(7, $gutter_pc, $gutter_px, $padding, $max_columns);}
+    .span_8 { @include span(8, $gutter_pc, $gutter_px, $padding, $max_columns);}
+    .span_9 { @include span(9, $gutter_pc, $gutter_px, $padding, $max_columns);}
+    .span_10 { @include span(10, $gutter_pc, $gutter_px, $padding, $max_columns);}
+    .span_11 { @include span(11, $gutter_pc, $gutter_px, $padding, $max_columns);}
+    .span_12 {
+        @include span_first;
+        width:100%;
+    }
+}
+ 
