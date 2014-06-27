@@ -1,4 +1,4 @@
----
+git---
 layout: post
 title: Resources and Documentation
 fullview: true
