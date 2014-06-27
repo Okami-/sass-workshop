@@ -3,7 +3,7 @@ sass-workshop
 
 Sass Workshop Website
 
-http://ucsf-drupal.github.io/
+http://ucsf-drupal.github.io/sass-workshop
 
 Slides
 
