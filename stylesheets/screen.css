@@ -66,3 +66,30 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
+
+/* line 64, icons/*.png */
+.icons-sprite, .icons-facebook-circle-512, .icons-github_alt-512, .icons-twitter-circle-512 {
+  background-image: url('/images/icons-s4b7d7b9176.png');
+  background-repeat: no-repeat;
+}
+
+/* line 84, ../../../../.rvm/gems/ruby-2.0.0-p451/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-facebook-circle-512 {
+  background-position: 0 0;
+}
+
+/* line 84, ../../../../.rvm/gems/ruby-2.0.0-p451/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-github_alt-512 {
+  background-position: 0 -512px;
+}
+
+/* line 84, ../../../../.rvm/gems/ruby-2.0.0-p451/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-twitter-circle-512 {
+  background-position: 0 -1024px;
+}
+
+/* line 21, ../sass/screen.scss */
+.github {
+  height: 512px;
+  width: 512px;
+}

@@ -5,21 +5,21 @@
 
 @import "compass/reset";
 
-//@import "compass/utilities/sprites"; // Has to be added, identifies that this
+@import "compass/utilities/sprites"; // Has to be added, identifies that this
                                      // project will be using the sprites utility
 
-//@import "icons/*.png";
+@import "icons/*.png";
 
-//@include all-icons-sprites;
+@include all-icons-sprites;
 
 // Setting a compass helper to a variable height
 // The helper detects the height and width by the icon name
 
-//$height: icons-sprite-height(github_alt-512);
-//$width: icons-sprite-width(github_alt-512);
+$height: icons-sprite-height(github_alt-512);
+$width: icons-sprite-width(github_alt-512);
 
-//.github {
-//  height:$height;
-//  width:$width;
-//}
+.github {
+  height:$height;
+  width:$width;
+}
 
