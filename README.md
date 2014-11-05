@@ -1,1 +1,1 @@
-Website for sass workshop http://ucsf-drupal.github.io/sass-workshop
+Website for sass workshop http://ucsf-web-services.github.io/sass-workshop
